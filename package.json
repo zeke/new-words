@@ -1,0 +1,29 @@
+{
+  "name": "new-words",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "async-to-generator": "^1.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.1",
+    "choo": "^6.10.3",
+    "issue-db": "^1.0.0",
+    "jest": "^22.4.3",
+    "standard": "^11.0.1",
+    "standard-markdown": "^4.0.2"
+  },
+  "scripts": {
+    "build": "browserify index.js -o dist.js -t [ babelify --presets [ env ] ]",
+    "test": "jest && standard --fix && standard-markdown",
+    "watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
+}
